@@ -1,12 +1,10 @@
 let btn=document.querySelector(".btn_search");
 let inpu=document.querySelector('input');
 btn.addEventListener('click',async()=>{
-    h5.style.display="none";
     await changetemp(inpu.value);
 })
 let h5=document.createElement("h3");
 document.querySelector('.container').append(h5);
-document.querySelector(".weather").style.display="none";
 h5.style.display="none";
 let url="https://api.openweathermap.org/data/2.5/weather?q="
 let apikey="&units=metric&appid=4a38c099645773e0279a3dfcd6777ab7";
@@ -46,6 +44,7 @@ async function changetemp(city){
     }
     }
     catch(err){
+        document.querySelector(".weather").style.display="none";
         h5.style.display="block";
     }
     
