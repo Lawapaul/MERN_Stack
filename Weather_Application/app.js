@@ -50,3 +50,9 @@ async function changetemp(city){
     
 }
 
+
+inpu.addEventListener("keypress",async (event)=>{
+    if((event.code)=="Enter"){
+        await changetemp(inpu.value);
+    }
+})
