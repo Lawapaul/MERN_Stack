@@ -99,13 +99,12 @@ async function get(search) {
         
         const existingErrors = document.querySelectorAll('h1.error-message');
         existingErrors.forEach(error => error.remove());
-        
         let res = await axios.get(api + search);
         if (res.data.Response == "False") {
             document.querySelector('.content').style.display = "none";
             let h1 = document.createElement('h1');
             h1.innerText = "Movie Not Found. Try Again.....";
-            h1.classList.add('error-message'); // Add class for easy cleanup
+            h1.classList.add('error-message');
             document.querySelector("body").appendChild(h1);
             h1.style.textAlign = 'center';
         } else {
