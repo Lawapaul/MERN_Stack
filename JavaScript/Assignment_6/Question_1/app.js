@@ -1,9 +1,9 @@
-
-const arrayAverage = ()=>{
-    let arr=[1,2,3,4,5,6,7,8,9];
-    let count=0;
-    for(let i=0;i<arr.length;i++){
-        count+=arr[i];
+list=[10,20,30,60];
+const arrayAverage=(list) =>{
+    let sum=0;
+    for(let i=0;i<list.length;i++){
+        sum+=list[i];
     }
-    console.log(count/3);
+    return sum/list.length;
 }
+console.log(arrayAverage(list));

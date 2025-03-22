@@ -1,23 +1,8 @@
-let num=prompt("Enter Number");
-let final=num;
+let num=prompt("Enter Number: ");
 let sum=0;
-while(true){
+while(num>0){
     let digit=num%10;
     sum+=digit;
-    num-=digit;
-    num/=10;
-    if(num<9){
-        sum+=num;
-        break;
-    }
-    else{
-        continue;
-    }
+    num=(num-digit)/10;
 }
-
-if(final<9){
-    console.log(`Sum is ${final}`);
-}
-else{
-    console.log(`Sum is ${sum}`)
-}
+console.log(sum);

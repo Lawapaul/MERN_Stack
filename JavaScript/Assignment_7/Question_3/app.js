@@ -1,3 +1,5 @@
-let arr=["harshit","singh","shekhawat"];
-let newarr=arr.map((i)=>(i.toUpperCase()));
+let list=['harshit','singh','shekhawat'];
+let newarr=list.map((i)=>{
+    return i.toUpperCase();
+})
 console.log(newarr);

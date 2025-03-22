@@ -1,13 +1,10 @@
 let arr=[4,6,8,11,15,21,26,9,45,73];
-let num=prompt("Enter Number: ");
-function main(){
+let num=9;
+function big(arr,num){
     for(let i=0;i<arr.length;i++){
-        if(arr[i]>num){
+        if(arr[i]>=9){
             console.log(arr[i]);
-        }
-        else{
-            continue;
         }
     }
 }
-main();
+big(arr,num);

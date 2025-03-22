@@ -1,0 +1,32 @@
+.container{
+    margin: 50px auto;
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+}
+h1{
+    text-align: center;
+}
+.input{
+    height: 100px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.inpu{
+    width: 80%;
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 10px;
+}
+.btn_inpu{
+    margin-top: 10px;
+    height: 36px;
+    margin-right: 10px;
+}
+.display{
+    height: 100%;
+    width: 100%;
+}

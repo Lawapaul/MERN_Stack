@@ -1,21 +1,9 @@
-let num=prompt("Enter Number");
-let final=num;
-let count=1;
-while(true){
-    let digit=num%10;
-    count+=1
-    num-=digit;
-    num/=10;
-    if(num<9){
-        break;
-    }
-    else{
-        continue;
-    }
+let num=prompt("Enter Number: ");
+let count=0;
+let temp=num;
+while(temp>0){
+    let digit=temp%10;
+    count++;
+    temp=(temp-digit)/10;
 }
-if(final<9){
-    console.log(`No of Digits: 1`);
-}
-else{
-    console.log(`No of Digits: ${count}`);
-}
+console.log(count);

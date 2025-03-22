@@ -1,9 +1,8 @@
 let num=32;
-let num1=3662;
-
-if(num%10==num1%10){
-    console.log("Same");
+let num1=3233;
+if(num%10 == num1%10){
+    console.log("Yes");
 }
 else{
-    console.log("Not Same");
+    console.log("No");
 }

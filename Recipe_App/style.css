@@ -1,0 +1,109 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2b1d0f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menu_bar{
+    height: 70px;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    
+}
+input[type="text"]{
+    height: 33px;
+    width: 18em;
+    border-radius: 3px;
+    border: 0px solid white;
+    padding-left: 10px;
+}
+.btn_one{
+    cursor: pointer;
+    height: 36px;
+    background-color: #ff5c5c;
+    color: white;
+    border: 0px solid white;
+    padding: 10px;
+    border-radius: 3px;
+}
+.name{
+    padding-left: 30px;
+}
+.search{
+    padding-right: 30px;
+}
+input[type="text"]:focus{
+    border: none;
+}
+.initial{
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+}
+.content{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+
+}
+.dishes{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    max-width: 350px;
+    line-height: 0;
+    flex-wrap: wrap;
+}
+.dishes img{
+     height: 80%;
+     width: 100%;
+     
+}
+.btn_recipe{
+    height: 40px;
+    width: 40%;
+    font-weight: 600;
+    font-size: 1.2em;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.btn_recipe:hover{
+    font-size: 1.25em;
+    opacity: 80%;
+    padding: 10px;
+    
+}
+.ingrediant{
+    margin: 60px auto;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+}
+.recipe_detail{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #694c2f;
+    z-index: 0;
+    
+}

@@ -1,10 +1,12 @@
-
-const isEven=(a)=>{
-    if(a%2==0){
-        return "Is Even";
-    }
-    else{
-        return "is Odd";
+let num=prompt("Enter Number: ");
+const isEven=(num)=>{
+    if(num%2==0){
+        return 1;
     }
 }
-
+if(isEven(num)==1){
+    console.log('yes');
+}
+else{
+    console.log('No');
+}
