@@ -61,7 +61,7 @@ app.delete("/todo/clearall",(req,res)=>{
     res.redirect("/todo");
 })
 
-let port =4000;
+let port =5000;
 app.listen(port,()=>{
     console.log("Listening to server.....")
 })
