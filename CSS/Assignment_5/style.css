@@ -1,0 +1,19 @@
+#outer{
+    height: 400px;
+    width: 400px;
+    border: 2px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-content: space-around;
+    border-radius: 10px;
+}
+.inner{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}

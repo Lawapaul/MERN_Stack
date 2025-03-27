@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvoCast - Your Daily Forecast</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 2.5em;
+            color: #4A90E2;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IvoCast</h1>
+        <nav>
+            <ul>
+                <li><a href="/current-weather">Current</a></li>
+                <li><a href="/forecast">Forecast</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Welcome to IvoCast</h1>
+            <p>Your comprehensive weather companion for accurate forecasts and real-time weather updates. Stay informed about weather conditions worldwide with our intuitive and reliable weather service.</p>
+            <p>Search for any city to get detailed weather information including temperature, humidity, wind speed, and more!</p>
+        </section>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="weather-icon">🌡️</div>
+                <h3>Real-Time Weather</h3>
+                <p>Get instant access to current weather conditions for any city worldwide with accurate temperature readings and detailed weather descriptions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="weather-icon">📅</div>
+                <h3>5-Day Forecast</h3>
+                <p>Plan ahead with our detailed 5-day weather forecast, helping you prepare for upcoming weather changes and make informed decisions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="weather-icon">🌍</div>
+                <h3>Global Coverage</h3>
+                <p>Access weather information for cities across the globe, with detailed metrics including humidity, wind speed, and atmospheric pressure.</p>
+            </div>
+        </div>
+
+        <div class="search-form">
+            <input type="text" id="city-search" placeholder="Enter city name" required>
+            <button onclick="searchWeather()">Search Weather</button>
+        </div>
+
+        <section id="current-weather">
+            <h2>Current Weather</h2>
+            <div class="weather-card main-weather">
+                <div class="weather-icon">🌤️</div>
+                <div class="weather-info">
+                    <h3 id="city-name">Enter a city to see weather</h3>
+                    <p class="temperature" id="temperature">--°C</p>
+                    <p id="weather-desc">--</p>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="weather-card">
+                    <h4>Humidity</h4>
+                    <p id="humidity">--%</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Wind Speed</h4>
+                    <p id="wind-speed">-- m/s</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Pressure</h4>
+                    <p id="pressure">-- hPa</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Feels Like</h4>
+                    <p id="feels-like">--°C</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="forecast">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-container">
+                <div class="weather-card">
+                    <h3>Mon</h3>
+                    <div class="weather-icon">☀️</div>
+                    <p>75°F / 60°F</p>
+                    <p>Sunny</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Tue</h3>
+                    <div class="weather-icon">⛅</div>
+                    <p>78°F / 62°F</p>
+                    <p>Partly Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Wed</h3>
+                    <div class="weather-icon">🌧️</div>
+                    <p>72°F / 58°F</p>
+                    <p>Rain</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Thu</h3>
+                    <div class="weather-icon">☁️</div>
+                    <p>70°F / 55°F</p>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Fri</h3>
+                    <div class="weather-icon">☀️</div>
+                    <p>73°F / 57°F</p>
+                    <p>Sunny</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About IvoCast</h2>
+            <p>IvoCast is your go-to source for accurate and up-to-date weather information. We provide current conditions and forecasts to help you plan your day and stay prepared for any weather.</p>
+            <p>Please note that this is a demo website, and the weather data shown is not real. In a real-world application, we would integrate with a weather API to provide accurate and up-to-date information.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IvoCast. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const API_KEY = '4a38c099645773e0279a3dfcd6777ab7';
+        const weatherSection = document.getElementById('current-weather');
+
+        function getWeatherEmoji(weatherMain) {
+            const emojis = {
+                'clear': '☀️',
+                'clouds': '☁️',
+                'rain': '🌧️',
+                'drizzle': '🌦️',
+                'thunderstorm': '⛈️',
+                'snow': '🌨️',
+                'mist': '🌫️'
+            };
+            return emojis[weatherMain.toLowerCase()] || '🌤️';
+        }
+
+        async function searchWeather() {
+            const city = document.getElementById('city-search').value;
+            if (!city) return;
+
+            try {
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`);
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message);
+                }
+
+                
+                weatherSection.style.display = 'block';
+
+               
+                document.getElementById('city-name').textContent = `${data.name}, ${data.sys.country}`;
+                document.getElementById('temperature').textContent = `${Math.round(data.main.temp)}°C`;
+                document.getElementById('weather-desc').textContent = data.weather[0].description;
+                document.getElementById('humidity').textContent = `${data.main.humidity}%`;
+                document.getElementById('wind-speed').textContent = `${data.wind.speed} m/s`;
+                document.getElementById('pressure').textContent = `${data.main.pressure} hPa`;
+                document.getElementById('feels-like').textContent = `${Math.round(data.main.feels_like)}°C`;
+
+                
+                document.querySelector('.weather-icon').textContent = getWeatherEmoji(data.weather[0].main);
+
+            } catch (error) {
+                alert('City not found. Please try again.');
+                weatherSection.style.display = 'none';
+            }
+        }
+
+        
+        document.getElementById('city-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchWeather();
+            }
+        });
+    </script>
+</body>
+</html>

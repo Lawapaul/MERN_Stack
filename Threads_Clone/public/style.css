@@ -1,0 +1,50 @@
+body{
+    margin: 0px;
+    background-image: url(background.png);
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+
+}
+.container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    margin-bottom: 15%;
+}
+.user, .pwd{
+    width: 94%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: none;
+    background-color: rgb(29,29,29);
+    border: none;
+    padding-left: 20px;
+    outline-width: thin;
+    color: rgb(216, 212, 212);
+}
+
+.login_btn{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    color: lightgrey;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.heading{
+    color: rgb(216, 212, 212);
+}
+

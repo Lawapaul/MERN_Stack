@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "name": "full_stack_development",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lawapaul/MERN_Stack.git"
+  },
+  "keywords": [],
+  "author": "Harshit Singh Shekhawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lawapaul/MERN_Stack/issues"
+  },
+  "homepage": "https://github.com/Lawapaul/MERN_Stack#readme",
+  "description": ""
+}
