@@ -10,10 +10,12 @@
     
 </head>
 <body>
-
+   
     <div class="container">
+        <i class="fa-brands fa-houzz" id="button_out"></i>
+        
     <div class="sidebar">
-        <div class="logo"><i class="fa-brands fa-houzz"></i><i class="fa-solid fa-bars" id="bars"></i></div>
+        <div class="logo"><i class="fa-brands fa-houzz" id="button_in"></i></div>
         <div class="elements"><i class="fa-solid fa-house"></i>Home</div>
         <div class="elements"><i class="fa-brands fa-wpexplorer"></i>Explore</div>
         <div class="elements"><i class="fa-solid fa-bell"></i>Notifications</div>
@@ -24,10 +26,11 @@
         <div class="elements"><i class="fa-regular fa-circle-dot"></i>More</div>
     </div>
     <div class="content">
-        <P>hELLO </P>
+       
         <form method="get" action="/threads/new">
         <button class="tweet_btn">New tweet</button>
         </form>
+        
         <%for(let post of posts){ %>
             <div class="tweet">
                 <p>@<%=post.username %></p>
@@ -45,6 +48,7 @@
             </div>
         <% } %>
     </div>
+    <form method="get" action="/threads/login"><button class="logout_btn">Log out</button></form>
 
 </div>
 

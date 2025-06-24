@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <title>Update</title>
+</head>
+<body>
+    <div class="content2">
+        <form method="post" action="/update/<%=id%>">
+            <input type="text" placeholder="Enter Sender Name" name="from" value="<%=data.from%>">
+            <br><br>
+            <input type="text" placeholder="Enter Receiver's Name" name="to" value="<%=data.to%>">
+            <br><br>
+            <textarea rows="15" cols="40" name="message" placeholder="Enter Message here"></textarea>
+            <br><br>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

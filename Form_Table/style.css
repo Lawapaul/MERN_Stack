@@ -1,0 +1,27 @@
+
+.container{
+    height: 600px;
+    width: 600px;
+    background-color: azure;
+    border: none;
+    margin: 60px auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+.container input[type="text"]{
+    width: 80%;
+    height: 60px;
+    font-size: 0.6em;
+    padding-left: 10px;
+}   
+.container select{
+    width: 80%;
+    height: 60px;
+}
+.btn{
+    width: 100px;
+    height: 60px;
+}
+.table th{
+    width: 200px;
+}

@@ -1,0 +1,6 @@
+input[type="text"]{
+    height: 50px;
+    width: 400px;
+    padding-left: 10px;
+    font-size: 1.25em;
+}

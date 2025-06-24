@@ -1,0 +1,45 @@
+.container{
+    width: 600px;
+}
+.individual{
+    height: 250px;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+#date{
+    text-align: right;
+    margin-right: 5px;
+}
+.content{
+    width: 100%;
+    background-color: aqua;
+}
+.btn{
+    margin-left: 5px;
+    height: 30px;
+    width: 60px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: aqua;
+}
+input[type="text"]{
+    height: 30px;
+    width: 200px;
+    margin-bottom: 15px;
+}
+.content1{
+    height: 500px;
+    width: 500px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    margin: 60px auto;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.content2{
+    width: 300px;
+}

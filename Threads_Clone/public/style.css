@@ -48,3 +48,11 @@ body{
     color: rgb(216, 212, 212);
 }
 
+#button{
+    cursor: pointer;
+}
+#button_out{
+    background-color: white;
+    display: none;
+
+}

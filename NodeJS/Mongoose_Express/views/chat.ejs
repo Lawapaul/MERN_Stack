@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <form method="get" action="/new">
+            <button class="btn" style="width: 300px; margin-bottom: 30px">New Message</button>
+        </form>
+        <% for (let users of user){ %>
+            <div class="individual">
+                <p id="date">Date: <%=users.date.toString().slice(0,16)%></p>
+                <div class="content">
+                    <p><i>From : <%=users.from%></i></p>
+                    <p><i>To: <%=users.to%></i></p>
+                    <p><b>Message: <%=users.message%></b></p>
+                </div>
+                <form method="post" action="/home/<%=users._id%>/?_method=DELETE">
+                    <button class="btn">Delete</button>
+                </form>
+                <form method="get" action="/update/<%=users._id%>">
+                    <button class="btn">Edit</button>
+                </form>
+                <p id="date">Time: <%=users.date.toString().slice(16,25)%></p>
+                
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+</html>
+

@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="/style_new.css">
 </head>
 <body>
+    <form method="get" action="/threads/login"><button class="logout_btn">Log out</button></form>
     <div class="container">
         <p class="heading">Update your tweet !!</p>
         <form method="post" action="/threads/edit/<%=post.id%>?_method=PATCH">
-            <input type="text" placeholder="Username" name="username" class="user">
-            <textarea placeholder="Enter Content" name="content" rows="20" cols="45" class="content"></textarea>
+            <input type="text" value="<%= post.username%>" name="username" class="user">
+            <textarea placeholder="<%= post.content%>" name="content" rows="20" cols="45" class="content"></textarea>
             <button class="login_btn">Click to Submit</button>
         </form>
+       
     </div>
     
 </body>

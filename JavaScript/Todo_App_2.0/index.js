@@ -3,6 +3,15 @@ const app=express();
 const path=require('path');
 const methodOverride = require('method-override');
 const { v4: uuidv4 } = require('uuid');
+const mysql = require('mysql2');
+
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'todo',
+  password: 'shekhawat'
+});
 
 app.use(methodOverride('_method'))
 app.set("view engine","ejs");
@@ -10,24 +19,33 @@ app.set("views",path.join(__dirname,"/views"));
 app.use(express.static(path.join(__dirname,"/public")));
 app.use(express.urlencoded({extended: true}));
 
-let tasks=[];
 let taskCount=0;
+let port = 3000;
 
 
 app.get("/todo",(req,res)=>{
-    res.render("index.ejs",{tasks,taskCount});
+    let q='select id,tasks from task';
+    connection.query(q,(err,result)=>{
+        if(err) throw err;
+        res.render('index.ejs',{result,taskCount})
+    })
+    
 })
 
 
 app.post("/todo",(req,res)=>{
     let {task}=req.body;
-    let obj={
-        id: uuidv4(),
-        content: task
-    }
-    tasks.push(obj);
-    taskCount=taskCount+1;
-    res.redirect("/todo");
+    let obj=[[
+        uuidv4(),
+        task
+    ]]
+    let q ='insert into task (id,tasks) values ?'
+    connection.query(q,[obj],(err,result)=>{
+        if(err) throw err;
+        taskCount=taskCount+1;
+        res.redirect("/todo");
+    })
+    
 });
 
 
@@ -49,19 +67,24 @@ app.patch("/todo/edit/:id",(req,res)=>{
 
 app.delete("/todo/:id",(req,res)=>{
     let {id}=req.params;
-    tasks=tasks.filter((p)=> id !== p.id);
-    taskCount=taskCount-1;
-    res.redirect("/todo");
+    let q='delete from task where id = ?';
+    connection.query(q,id,(err,result)=>{
+        if (err) throw err;
+        taskCount=taskCount-1;
+        res.redirect("/todo");
+    })
 })
 
 
 app.delete("/todo/clearall",(req,res)=>{
-    tasks=[];
-    taskCount=0;
-    res.redirect("/todo");
+    let q='truncate table task';
+    connection.query(q,(err,result)=>{
+        if (err) throw err;
+        taskCount=0;
+        res.redirect("/todo");
+    })
 })
 
-let port =5000;
 app.listen(port,()=>{
     console.log("Listening to server.....")
 })

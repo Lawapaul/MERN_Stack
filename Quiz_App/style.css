@@ -1,0 +1,81 @@
+.container{
+    height: 800px;
+    width: 800px;
+    margin: 60px auto;
+    background-color: aqua;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+
+}
+h1{
+    text-align: center;
+}
+input[type="text"]{
+    height: 60px;
+    font-size: 1.25em;
+    width: 70%;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+    align-content: space-around;
+
+}
+.btn_welcome{
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    
+}
+.btn_welcome:hover{
+    background-color: red;
+}
+.start{
+    width: 100%;
+    height: 500px;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+.btn_continue{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn_continue:hover{
+    background-color: red;
+}
+
+.question{
+    font-size: 2em;
+    text-align: center;
+    display: none;
+}
+.btn_submit{
+    border: none;
+    height: 100px;
+    width: 400px;
+    font-size: 1em;
+    border-radius: 10px;
+}
+.btn_submit:hover{
+    background-color: red;
+}
+.thankyou{
+    display: block;
+}
